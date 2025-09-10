@@ -1,0 +1,98 @@
+body {
+    background-color: #161616;
+    font-family: "Work Sans";
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    overflow: auto;
+}
+
+.keycap {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #1f1f1f;
+    border: 2px solid #101010;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#status {
+    margin-bottom: 8px;
+}
+
+#image-container {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* nav bar & scroll bar */
+nav {
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 0.2rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+nav h1 {
+    font-size: 1.1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.gradient-text {
+    background: linear-gradient(300deg, #ffffff, #ddffce);
+    background-clip: text;
+    color: transparent;
+    text-shadow:
+        1px 1px 5px rgba(221, 255, 206, 0.83),
+        1px 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 9px;
+    background: #acacac;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background: #dad7d5;
+}

@@ -1,0 +1,400 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: #161616;
+    font-family: "Work Sans";
+    color: white;
+    font-size: 16px;
+}
+
+hr {
+    border: none;
+    background-color: #222222;
+    width: 75%;
+    margin-left: 15%;
+    height: 2.2px;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 9px;
+    background: #acacac;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background: #dad7d5;
+}
+
+.intro {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #070707;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    text-align: center;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50 -50%);
+    color: white;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 10px;
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 65%;
+    margin-bottom: 15px;
+}
+
+.title {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 35px;
+    z-index: 0;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.link:hover {
+    opacity: 1;
+    scale: 110%;
+}
+
+.link img {
+    width: 100%;
+    height: 100%;
+}
+
+#dev {
+    right: 50px;
+}
+
+#github {
+    right: 5px;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+.wrap img {
+    margin: 0 0 0 -20px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+#arrow {
+    transition: opacity 0.5s ease;
+}
+
+#arrow.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    5.55556% {
+        transform: translateY(0);
+    }
+    11.11111% {
+        transform: translateY(0);
+    }
+    22.22222% {
+        transform: translateY(-15px);
+    }
+    27.77778% {
+        transform: translateY(0);
+    }
+    33.33333% {
+        transform: translateY(-15px);
+    }
+    44.44444% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.skills-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #2c2c2e;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #3a3a3c;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.skill-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-container::after {
+    content: attr(data-line1) "\A" attr(data-line2);
+    white-space: pre;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.tooltip-container:hover::after {
+    opacity: 1;
+}
+
+.scrollanchor {
+    height: 100vh;
+}
+
+.left-container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+}
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.work-card {
+    background-color: #2c2c2e;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3a3a3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #505052;
+}
+
+.rainbow-fill path {
+    transition: fill 0.3s ease;
+}
+
+.work-card:hover .rainbow-fill path {
+    animation: rainbowFill 2s linear infinite;
+}
+
+@keyframes rainbowFill {
+    0% {
+        fill: red;
+    }
+    20% {
+        fill: orange;
+    }
+    40% {
+        fill: yellow;
+    }
+    60% {
+        fill: green;
+    }
+    80% {
+        fill: blue;
+    }
+    100% {
+        fill: purple;
+    }
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #2c2c2e;
+    padding: 20px 25px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.project-card .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #3a3a3c;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #505052;
+}

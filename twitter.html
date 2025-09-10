@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="maxuhhhh" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="stylesheet" href="twitter.css" />
+        <title>Twitter Intent Creator | maxuhhhh</title>
+    </head>
+    <body>
+        <nav>
+            <h1>
+                <a href="index.html">max<span class="gradient-text">uhhhh</span></a>
+            </h1>
+        </nav>
+        <div class="section">
+            <h2>X / Twitter Post Intent Creator</h2>
+            <textarea id="tweetText" rows="4" placeholder="Your tweet..."></textarea>
+            <input type="text" id="hashtags" placeholder="Hashtags (comma-separated)" />
+            <input type="text" id="url" placeholder="URL (optional)" />
+            <button onclick="generateTweet()">Generate Tweet</button>
+            <a id="tweetLink" href="#" target="_blank" style="display: none">Oops something went wrong.</a>
+        </div>
+
+        <!-- Follow Intent Section -->
+        <div class="section">
+            <h2>X / Twitter Follow Intent Creator</h2>
+            <input type="text" id="username" placeholder="Twitter username" />
+            <button onclick="generateFollow()">Generate Follow Link</button>
+            <a id="followLink" href="#" target="_blank" style="display: none">Oops something went wrong.</a>
+        </div>
+        <script src="twitter.js"></script>
+    </body>
+</html>
